@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.quiz_game.quiz.Quiz
+import com.example.quiz_game.quiz.QuizScreenViewModel
 import com.example.quiz_game.ui.theme.Quiz_GameTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,18 +23,12 @@ class MainActivity : ComponentActivity() {
             Quiz_GameTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Quiz(
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
+                        quizScreenViewModel = QuizScreenViewModel()
                     )
                 }
             }
         }
     }
-}
-
-@Composable
-fun Quiz( modifier: Modifier = Modifier) {
-
-
-
 }
 
